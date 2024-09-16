@@ -17,6 +17,15 @@
       },
       "auth": {
         "notesapp5a0ec454": {}
+      },
+      "function": {
+        "notesapp60faf0d4": {
+          "deploymentBucketName": "amplify-notesapp-dev-db3ec-deployment",
+          "s3Key": "amplify-builds/notesapp60faf0d4-38784556724f58766a7a-build.zip"
+        }
+      },
+      "api": {
+        "notesappapi": {}
       }
     }
   }

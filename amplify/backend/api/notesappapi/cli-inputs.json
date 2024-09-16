@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "notesapp60faf0d4",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

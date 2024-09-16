@@ -1,4 +1,20 @@
 {
+  "api": {
+    "notesappapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "notesapp60faf0d4"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "notesapp5a0ec454": {
       "customAuth": false,
@@ -25,7 +41,31 @@
       "service": "Cognito"
     }
   },
-  "function": {},
+  "function": {
+    "notesapp60faf0d4": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_notesapp60faf0d4_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "notesapp60faf0d4"
+        }
+      ]
+    },
+    "AMPLIFY_function_notesapp60faf0d4_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "notesapp60faf0d4"
+        }
+      ]
+    }
+  },
   "storage": {
     "notesappstorage": {
       "dependsOn": [],
