@@ -1,0 +1,30 @@
+// amplify/auth/resource.ts
+
+import { defineAuth } from '@aws-amplify/backend';
+
+// Define the AuthOptions type
+interface AuthOptions {
+  name?: string;
+  senders?: {
+    email: Pick<UserPoolSESOptions, "fromEmail" | "fromName" | "replyTo">;
+  };
+  userAttributes?: UserAttributes;
+  // Other properties...
+  userPool?: {
+    poolId: string;
+    poolName: string;
+  };
+}
+
+// Example object of AuthOptions
+const authOptions: AuthOptions = {
+  name: 'MyAuth',
+  userPool: {
+    poolId: 'us-east-1_example',
+    poolName: 'ExampleUserPool',
+  },
+};
+
+export const auth = defineAuth(authOptions);
+
+console.log(authOptions.userPool?.poolId); // Output: us-east-1_example
